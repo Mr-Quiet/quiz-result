@@ -530,7 +530,7 @@ h6 {
   }
 
   .btn {
-    padding-bottom: 2.5rem;
+    padding-bottom: 3.75rem;
   }
 }
 
@@ -712,15 +712,15 @@ h6 {
     }
 }
 
-@supports (padding-bottom: clamp( 2.5rem , 1.0714285714rem  +  7.1428571429vw , 6.25rem )) {
+@supports (padding-bottom: clamp( 3.75rem , 2.7976190476rem  +  4.7619047619vw , 6.25rem )) {
     .btn {
-      padding-bottom: clamp( 2.5rem , 1.0714285714rem  +  7.1428571429vw , 6.25rem );
+      padding-bottom: clamp( 3.75rem , 2.7976190476rem  +  4.7619047619vw , 6.25rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 2.5rem , 1.0714285714rem  +  7.1428571429vw , 6.25rem )) {
+@supports not (padding-bottom: clamp( 3.75rem , 2.7976190476rem  +  4.7619047619vw , 6.25rem )) {
     .btn {
-      padding-bottom: calc(2.5rem + 3.75 * (100vw - 20rem) / 52.5);
+      padding-bottom: calc(3.75rem + 2.5 * (100vw - 20rem) / 52.5);
     }
 }
 }
