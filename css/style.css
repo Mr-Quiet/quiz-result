@@ -140,11 +140,6 @@ h6 {
   width: 100%;
 }
 
-.spollers:focus {
-  outline: none;
-  outline: 0;
-}
-
 .spollers__summary {
   cursor: pointer;
   border-radius: 0.3125rem;
@@ -186,6 +181,11 @@ h6 {
 .spollers__summary::marker,
 .spollers__summary::-webkit-details-marker {
   display: none;
+}
+
+.spollers__summary:focus {
+  outline: none;
+  outline: 0;
 }
 
 .spollers__content {
