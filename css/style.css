@@ -153,6 +153,7 @@ h6 {
   padding: 1.25rem;
   font-size: 1.5rem;
   line-height: 1.25;
+  width: 100%;
 }
 
 .spollers__title svg {
@@ -165,7 +166,6 @@ h6 {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  justify-self: flex-end;
 }
 
 [open] .spollers__title {
