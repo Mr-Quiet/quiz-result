@@ -147,13 +147,15 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1.25rem;
   font-size: 1.5rem;
   line-height: 1.25;
-  list-style: none;
 }
 
 .spollers__title svg {
