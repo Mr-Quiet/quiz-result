@@ -140,6 +140,11 @@ h6 {
   width: 100%;
 }
 
+.spollers:focus {
+  outline: none;
+  outline: 0;
+}
+
 .spollers__summary {
   cursor: pointer;
   border-radius: 0.3125rem;
