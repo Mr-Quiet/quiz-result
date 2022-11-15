@@ -135,7 +135,7 @@ h6 {
           align-items: center;
   border-radius: 0.3125rem;
   padding: 0.9375rem;
-  background-color: #04134E;
+  background-color: #0081A7;
   color: #fff;
   font-size: 1.125rem;
   line-height: 1.2777777778;
@@ -147,6 +147,11 @@ h6 {
 
 .button._fw {
   width: 100%;
+}
+
+.button span {
+  padding-left: 0.3125rem;
+  text-transform: lowercase;
 }
 
 .spollers__summary {
@@ -391,8 +396,8 @@ h6 {
 }
 
 .logo__image-ibg {
-  width: 12.25rem;
-  height: 4.5625rem;
+  width: 11.5625rem;
+  height: 5.875rem;
 }
 
 /*
@@ -474,13 +479,13 @@ h6 {
 .speciality__body {
   display: -ms-grid;
   display: grid;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
 .educational-options__body {
   display: -ms-grid;
   display: grid;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
 .partners__image {
@@ -507,17 +512,30 @@ h6 {
   height: 5.625rem;
 }
 
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 0.9375rem;
+     -moz-column-gap: 0.9375rem;
+          column-gap: 0.9375rem;
+}
+
 @media (min-width: 72.5em) {
   .information__container {
     gap: 1.5625rem;
   }
 
   .header {
-    padding-top: 3.125rem;
+    padding-top: 2.5rem;
   }
 
   .header {
-    padding-bottom: 3.125rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .btn {
+    row-gap: 1.5625rem;
   }
 }
 
@@ -527,11 +545,15 @@ h6 {
   }
 
   .header {
-    padding-top: 2.5rem;
+    padding-top: 1.5625rem;
   }
 
   .header {
-    padding-bottom: 2.5rem;
+    padding-bottom: 1.5625rem;
+  }
+
+  .btn {
+    row-gap: 0.9375rem;
   }
 }
 
@@ -546,6 +568,13 @@ h6 {
 @media (max-width: 47.99875em) {
   .partners__image {
     gap: 0.3125rem;
+  }
+
+  .btn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -571,34 +600,46 @@ h6 {
     }
 }
 
-@supports (padding-top: clamp( 2.5rem , 2.2619047619rem  +  1.1904761905vw , 3.125rem )) {
+@supports (padding-top: clamp( 1.5625rem , 1.2053571429rem  +  1.7857142857vw , 2.5rem )) {
     .header {
-      padding-top: clamp( 2.5rem , 2.2619047619rem  +  1.1904761905vw , 3.125rem );
+      padding-top: clamp( 1.5625rem , 1.2053571429rem  +  1.7857142857vw , 2.5rem );
     }
 }
 
-@supports not (padding-top: clamp( 2.5rem , 2.2619047619rem  +  1.1904761905vw , 3.125rem )) {
+@supports not (padding-top: clamp( 1.5625rem , 1.2053571429rem  +  1.7857142857vw , 2.5rem )) {
     .header {
-      padding-top: calc(2.5rem + 0.625 * (100vw - 20rem) / 52.5);
+      padding-top: calc(1.5625rem + 0.9375 * (100vw - 20rem) / 52.5);
     }
 }
 
-@supports (padding-bottom: clamp( 2.5rem , 2.2619047619rem  +  1.1904761905vw , 3.125rem )) {
+@supports (padding-bottom: clamp( 1.5625rem , 1.2053571429rem  +  1.7857142857vw , 2.5rem )) {
     .header {
-      padding-bottom: clamp( 2.5rem , 2.2619047619rem  +  1.1904761905vw , 3.125rem );
+      padding-bottom: clamp( 1.5625rem , 1.2053571429rem  +  1.7857142857vw , 2.5rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 2.5rem , 2.2619047619rem  +  1.1904761905vw , 3.125rem )) {
+@supports not (padding-bottom: clamp( 1.5625rem , 1.2053571429rem  +  1.7857142857vw , 2.5rem )) {
     .header {
-      padding-bottom: calc(2.5rem + 0.625 * (100vw - 20rem) / 52.5);
+      padding-bottom: calc(1.5625rem + 0.9375 * (100vw - 20rem) / 52.5);
+    }
+}
+
+@supports (row-gap: clamp( 0.9375rem , 0.6994047619rem  +  1.1904761905vw , 1.5625rem )) {
+    .btn {
+      row-gap: clamp( 0.9375rem , 0.6994047619rem  +  1.1904761905vw , 1.5625rem );
+    }
+}
+
+@supports not (row-gap: clamp( 0.9375rem , 0.6994047619rem  +  1.1904761905vw , 1.5625rem )) {
+    .btn {
+      row-gap: calc(0.9375rem + 0.625 * (100vw - 20rem) / 52.5);
     }
 }
 }
 
 @media (any-hover: hover) {
   .button:hover {
-    background-color: #020a2c;
+    background-color: #00607d;
   }
 }
 
