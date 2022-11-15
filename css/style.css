@@ -134,14 +134,15 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 0.3125rem;
-  padding: 0.9375rem;
+  padding: 0.625rem;
   background-color: #04134E;
   color: #fff;
-  font-size: 1.25rem;
-  line-height: 1.25;
+  font-size: 1.125rem;
+  line-height: 1.2777777778;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  text-transform: uppercase;
 }
 
 .button._fw {
@@ -195,8 +196,8 @@ h6 {
 }
 
 .spollers__title {
-  font-size: 1.125rem;
-  line-height: 1.3888888889;
+  font-size: 1rem;
+  line-height: 1.4375;
 }
 
 .spollers__content {
@@ -316,8 +317,8 @@ h6 {
 }
 
 .info-header__title {
-  font-size: 1.25rem;
-  line-height: 1.25;
+  font-size: 1.125rem;
+  line-height: 1.2777777778;
   padding: 0.625rem;
   color: #fff;
   position: relative;
@@ -341,7 +342,8 @@ h6 {
 }
 
 .spollers__text {
-  line-height: 1.3888888889;
+  font-size: 1rem;
+  line-height: 1.4375;
   color: #787878;
 }
 
@@ -350,7 +352,8 @@ h6 {
 }
 
 .spollers__link {
-  line-height: 1.3888888889;
+  font-size: 1rem;
+  line-height: 1.4375;
   color: #0495B5;
   position: relative;
 }
@@ -465,6 +468,7 @@ h6 {
   display: inline;
   color: #04134E;
   font-weight: 500;
+  font-size: 1.5rem;
 }
 
 .speciality__body {
@@ -515,10 +519,6 @@ h6 {
   .header {
     padding-bottom: 3.125rem;
   }
-
-  .chosen__title {
-    font-size: 1.75rem;
-  }
 }
 
 @media (max-width: 20em) {
@@ -532,10 +532,6 @@ h6 {
 
   .header {
     padding-bottom: 2.5rem;
-  }
-
-  .chosen__title {
-    font-size: 1.625rem;
   }
 }
 
@@ -596,18 +592,6 @@ h6 {
 @supports not (padding-bottom: clamp( 2.5rem , 2.2619047619rem  +  1.1904761905vw , 3.125rem )) {
     .header {
       padding-bottom: calc(2.5rem + 0.625 * (100vw - 20rem) / 52.5);
-    }
-}
-
-@supports (font-size: clamp( 1.625rem , 1.5773809524rem  +  0.2380952381vw , 1.75rem )) {
-    .chosen__title {
-      font-size: clamp( 1.625rem , 1.5773809524rem  +  0.2380952381vw , 1.75rem );
-    }
-}
-
-@supports not (font-size: clamp( 1.625rem , 1.5773809524rem  +  0.2380952381vw , 1.75rem )) {
-    .chosen__title {
-      font-size: calc(1.625rem + 0.125 * (100vw - 20rem) / 52.5);
     }
 }
 }
