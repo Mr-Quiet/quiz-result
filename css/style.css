@@ -482,6 +482,15 @@ h6 {
   padding: 0.9375rem;
 }
 
+.spollers__dicsipline::marker,
+.spollers__dicsipline::-webkit-details-marker {
+  display: none;
+}
+
+.spollers__dicsipline:focus {
+  outline: none;
+}
+
 .spollers__details-dicsipline:nth-child(odd) {
   background-color: #F8F8F8;
 }
