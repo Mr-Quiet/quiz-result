@@ -231,6 +231,96 @@ h6 {
      object-fit: contain;
 }
 
+.about-university {
+  padding-bottom: 1.875rem;
+}
+
+.about-university__content {
+  position: relative;
+  border-radius: 0.3125rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding-bottom: 56.2831858407%;
+}
+
+.about-university__video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  overflow: hidden;
+  border-radius: 0.3125rem;
+}
+
+.about-university__splash {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  -webkit-transition: opacity 0.2s ease 0s, -webkit-transform 0.3s ease 0s;
+  transition: opacity 0.2s ease 0s, -webkit-transform 0.3s ease 0s;
+  -o-transition: transform 0.3s ease 0s, opacity 0.2s ease 0s;
+  transition: transform 0.3s ease 0s, opacity 0.2s ease 0s;
+  transition: transform 0.3s ease 0s, opacity 0.2s ease 0s, -webkit-transform 0.3s ease 0s;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+._active-video .about-university__splash {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+}
+
+.about-university__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.about-university__bgimage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.about-university__button {
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  opacity: 0.4;
+}
+
 .information__container {
   display: -ms-grid;
   display: grid;
@@ -257,6 +347,10 @@ h6 {
   -webkit-transform: translate(0px, -50%);
       -ms-transform: translate(0px, -50%);
           transform: translate(0px, -50%);
+}
+
+.info-partners_line::before {
+  background-color: #0081A7;
 }
 
 .info-partners__title {
@@ -374,16 +468,74 @@ h6 {
 }
 
 .spollers__dicsipline {
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0.9375rem;
 }
 
-.spollers__dicsipline:nth-child(odd) {
+.spollers__details-dicsipline:nth-child(odd) {
   background-color: #F8F8F8;
+}
+
+.spollers__actions {
+  pointer-events: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.625rem;
 }
 
 .spollers__image-ibg {
   width: 100%;
   padding-bottom: 69.1818181818%;
+}
+
+.spollers__btn-ibg {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1.5625rem;
+          flex: 0 0 1.5625rem;
+  position: relative;
+}
+
+.spollers__btn-ibg svg {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  fill: #04134E;
+}
+
+.spollers__info {
+  padding: 0 0.9375rem;
+  padding-bottom: 0.9375rem;
+}
+
+.spollers__info-text {
+  padding: 0.625rem;
+  color: #5c5c5c;
+  border: 1px solid #B5B5B5;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  background-color: inherit;
 }
 
 .header__container {
@@ -604,6 +756,12 @@ h6 {
 }
 
 @media (max-width: 47.99875em) {
+  .about-university__button {
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+
   .partners__image {
     gap: 0rem 1.25rem;
   }
@@ -700,6 +858,13 @@ h6 {
 @media (any-hover: hover) {
   .button:hover {
     background-color: #00607d;
+  }
+
+  .about-university__button:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1;
   }
 }
 
