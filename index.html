@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230114011109">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230114133156">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -749,15 +749,12 @@
 	</div>
 </div> -->
 	<script>
-		// 2. This code loads the IFrame Player API code asynchronously.
 		let tag = document.createElement('script');
 
 		tag.src = "https://www.youtube.com/iframe_api";
-		let firstScriptTag = document.getElementsByTagName('script')[0];
+		let firstScriptTag = document.getElementsByTagName('title')[0];
 		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-		// 3. This function creates an <iframe> (and YouTube player)
-		//    after the API code downloads.
 		let player;
 
 		function onYouTubeIframeAPIReady() {
@@ -766,7 +763,10 @@
 				playerVars: {
 					rel: 0,
 					showinfo: 0,
-					ecver: 2
+					color: 'white',
+					// ecver: 2,
+					// listType: 'user_uploads',
+					// playsinline: 1
 				},
 				events: {
 					// 'onReady': onPlayerReady,
@@ -775,6 +775,21 @@
 			});
 
 		}
+		// let done = false;
+		function onPlayerStateChange(event) {
+			if (event.data == YT.PlayerState.ENDED) {
+				// || event.data == YT.PlayerState.PAUSED
+				document.documentElement.classList.remove('_active-video');
+				// done = true;
+			}
+		}
+
+		// function onPlayerReady(event) {
+		// 	event.target.playVideo();
+		// }
+		// function stopVideo() {
+		// 	player.stopVideo();
+		// }
 
 		window.addEventListener("load", function(e) {
 			document.addEventListener('click', function(e) {
@@ -786,33 +801,8 @@
 				}
 			});
 		});
-
-		// 4. The API will call this function when the video player is ready.
-		function onPlayerReady(event) {
-			event.target.playVideo();
-		}
-
-		// 5. The API calls this function when the player's state changes.
-		//    The function indicates that when playing a video (state=1),
-		//    the player should play for six seconds and then stop.
-		// var done = false;
-		function onPlayerStateChange(event) {
-			// console.log(event.data);
-			// console.log(YT.PlayerState.ENDED);
-			if (event.data == YT.PlayerState.ENDED) {
-				// || event.data == YT.PlayerState.PAUSED
-				// setTimeout(stopVideo, 6000);
-				document.documentElement.classList.remove('_active-video');
-
-				// done = true;
-			}
-		}
-
-		function stopVideo() {
-			player.stopVideo();
-		}
 	</script>
-	<script src="js/app.min.js?_v=20230114011109"></script>
+	<script src="js/app.min.js?_v=20230114133156"></script>
 
 </body>
 

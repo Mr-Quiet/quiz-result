@@ -257,7 +257,6 @@ h6 {
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
-  overflow: hidden;
   border-radius: 0.3125rem;
 }
 
