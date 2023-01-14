@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230114133156">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230114142216">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,25 +34,11 @@
 						</div>
 						<div class="about-university">
 							<div class="about-university__content">
-								<!-- <iframe class="about-university__video" src="https://www.youtube.com/embed/bDYEnNzprzE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-								<!-- <div class="about-university__footage"> -->
-								<!-- <iframe class="about-university__video" src="https://www.youtube.com/embed/SCIlUL7sFHw?controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-								<!-- <iframe class="about-university__video" src="https://www.youtube.com/embed/I6_RZBfdGvM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-								<!-- <embed class="about-university__video" src="http://www.youtube.com/v/I6_RZBfdGvM?version=3&amp;amp;rel=0&amp;autohide=1&amp;autoplay=1" wmode="transparent" type="application/x-shockwave-flash" width="100%" height="100%" allowfullscreen="true" title="Adobe Flash Player"> -->
-								<!-- <embed class="about-university__video" src="http://www.youtube.com/v/I6_RZBfdGvM?version=3&amp;amp;rel=0&amp;autohide=1&amp;autoplay=1" wmode="transparent" type="application/x-shockwave-flash" width="100%" height="100%" allowfullscreen="true" title="Adobe Flash Player"> -->
 								<div class="about-university__video" id="player"></div>
-								<!-- <video class="about-university__video" controlsList="nodownload" controls="controls">
-										<source src="img/about/duet-video.mp4">
-									</video> -->
-								<!-- </div> -->
 								<div class="about-university__splash">
 									<picture><source srcset="img/about/duet-photo.webp" type="image/webp"><img class="about-university__bgimage" src="img/about/duet-photo.png" alt="Фон"></picture>
 									<div class="about-university__body">
-										<!-- <div class="about-university__items"> -->
-										<!-- <h2 class="about-university__title">Державний університет економіки і технологій</h2>
-											<p class="about-university__text">Освіта у Кривому Розі!</p> -->
 										<button type="submit" class="about-university__button"><img class="about-university__image" alt="Play" src="img/about/play.svg" /></button>
-										<!-- </div> -->
 									</div>
 								</div>
 							</div>
@@ -796,13 +782,12 @@
 				const target = e.target;
 				if (target.closest('.about-university__button')) {
 					document.documentElement.classList.add('_active-video');
-
 					player.playVideo();
 				}
 			});
 		});
 	</script>
-	<script src="js/app.min.js?_v=20230114133156"></script>
+	<script src="js/app.min.js?_v=20230114142216"></script>
 
 </body>
 

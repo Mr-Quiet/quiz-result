@@ -277,6 +277,8 @@ h6 {
       -ms-transform: scale(1);
           transform: scale(1);
   opacity: 1;
+  border-radius: 0.3125rem;
+  overflow: hidden;
 }
 
 ._active-video .about-university__splash {
