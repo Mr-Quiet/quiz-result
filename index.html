@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230114142216">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230117123236">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -741,10 +741,9 @@
 		let firstScriptTag = document.getElementsByTagName('title')[0];
 		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-		let player;
-
+		// let player;
 		function onYouTubeIframeAPIReady() {
-			player = new YT.Player('player', {
+			const player = new YT.Player('player', {
 				videoId: 'I6_RZBfdGvM',
 				playerVars: {
 					rel: 0,
@@ -755,7 +754,7 @@
 					// playsinline: 1
 				},
 				events: {
-					// 'onReady': onPlayerReady,
+					'onReady': onPlayerReady,
 					'onStateChange': onPlayerStateChange
 				},
 			});
@@ -770,24 +769,33 @@
 			}
 		}
 
-		// function onPlayerReady(event) {
-		// 	event.target.playVideo();
-		// }
-		// function stopVideo() {
-		// 	player.stopVideo();
-		// }
-
-		window.addEventListener("load", function(e) {
+		function onPlayerReady(event) {
+			// event.target.playVideo();
 			document.addEventListener('click', function(e) {
 				const target = e.target;
 				if (target.closest('.about-university__button')) {
 					document.documentElement.classList.add('_active-video');
-					player.playVideo();
+					// player.playVideo();
+					event.target.playVideo();
+
 				}
 			});
-		});
+		}
+		// function stopVideo() {
+		// 	player.stopVideo();
+		// }
+
+		// window.addEventListener("load", function (e) {
+		// 	document.addEventListener('click', function (e) {
+		// 		const target = e.target;
+		// 		if (target.closest('.about-university__button')) {
+		// 			document.documentElement.classList.add('_active-video');
+		// 			player.playVideo();
+		// 		}
+		// 	});
+		// });
 	</script>
-	<script src="js/app.min.js?_v=20230114142216"></script>
+	<script src="js/app.min.js?_v=20230117123236"></script>
 
 </body>
 
